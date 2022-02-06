@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BankTransactionAnalyzerSimple {
+public class BankTransactionAnalyzer {
     private static final String RESOURCES = "src/main/resources/";
 
     // CSV파일을 명령줄 인수로 전달해 로딩한다.
@@ -42,5 +42,4 @@ public class BankTransactionAnalyzerSimple {
         }
         return bankTransactionsInMonth;
     }
-
 }
