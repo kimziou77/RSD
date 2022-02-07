@@ -1,5 +1,6 @@
 ## RSD (Realworld-Software-Development)
-실전 자바 소프트웨어 개발
+[실전 자바 소프트웨어 개발](https://github.com/kimziou77/Reading-Books/tree/main/books/%EC%8B%A4%EC%A0%84-%EC%9E%90%EB%B0%94%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EA%B0%9C%EB%B0%9C)
+<!-- https://github.com/Iteratr-Learning/Real-World-Software-Development -->
 
 ### 목차
 - [**01 여행의 시작**](https://github.com/kimziou77/RSD/tree/master/01%20%EC%97%AC%ED%96%89%EC%9D%98%20%EC%8B%9C%EC%9E%91)  
