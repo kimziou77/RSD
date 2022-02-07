@@ -10,7 +10,9 @@ public class BankStatementCSVParser implements BankStatementParser{
     @Override
     public BankTransaction parseFrom(final String line){
         final String[] columns = line.split(",");
-
+//        if(columns.length < EXPECTED_ATTRIBUTES_LEGNTH){
+//            throw new CSVSyntaxException();
+//        }
         final LocalDate date = LocalDate.parse(columns[0], DATE_PATTERN);
         final double amount = Double.parseDouble(columns[1]);
         final String description = columns[2];
