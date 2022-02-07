@@ -7,6 +7,15 @@ public class BankStatementProcessor {
     public BankStatementProcessor(final List<BankTransaction> bankTransactions){
         this.bankTransactions = bankTransactions;
     }
+
+    public double summarizeTransactions(final BankTransactionSummarizer bankTransactionSummarizer){
+        double result =0;
+        for(final BankTransaction bankTransaction: bankTransactions){
+            result = bankTransactionSummarizer.summarize(result, bankTransaction);
+        }
+        return result;
+    }
+
     public double calculateTotalAmount(){
         double total = 0d;
         for(final BankTransaction bankTransaction: bankTransactions){
@@ -41,5 +50,8 @@ public class BankStatementProcessor {
             }
         }
         return result;
+    }
+    public List<BankTransaction> findTransactionsGreaterThanEqual(final int amount){
+        return findTransactions(bankTransaction -> bankTransaction.getAmount() >= amount);
     }
 }
