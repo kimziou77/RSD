@@ -1,6 +1,5 @@
-import main.BankStatementCSVParser;
-import main.BankStatementParser;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 class BankStatementCSVParserTest {
     private final BankStatementParser statementParser = new BankStatementCSVParser();
@@ -8,7 +7,6 @@ class BankStatementCSVParserTest {
     @Test
     public void shouldParseOneCorrectLine() throws Exception{
         System.out.println("dkd");
-        // Assert.fail("Not yet implemented");
+        fail("Not yet implemented");
     }
-
 }
