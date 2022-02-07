@@ -12,6 +12,9 @@ public class BankStatementAnalyzer {
         final List<String> lines = Files.readAllLines(path);
         final List<BankTransaction> bankTransactions = bankStatementParser.parseLinesFrom(lines);
         final BankStatementProcessor bankStatementProcessor = new BankStatementProcessor(bankTransactions);
+        final List<BankTransaction> transactions = bankStatementProcessor.findTransactions(bankTransaction ->
+                bankTransaction.getDate().getMonth() == Month.FEBRUARY &&
+                bankTransaction.getAmount() >= 1_000);
 
         collectSummary(bankStatementProcessor);
     }
