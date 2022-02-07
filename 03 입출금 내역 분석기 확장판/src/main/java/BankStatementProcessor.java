@@ -2,6 +2,8 @@ import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.stream.Collectors.toList;
+
 public class BankStatementProcessor {
     private final List<BankTransaction> bankTransactions;
     public BankStatementProcessor(final List<BankTransaction> bankTransactions){
@@ -52,6 +54,9 @@ public class BankStatementProcessor {
         return result;
     }
     public List<BankTransaction> findTransactionsGreaterThanEqual(final int amount){
-        return findTransactions(bankTransaction -> bankTransaction.getAmount() >= amount);
+        return bankTransactions
+                .stream()
+                .filter(bankTransaction -> bankTransaction.getAmount() >= 1_000)
+                .collect(toList());
     }
 }
