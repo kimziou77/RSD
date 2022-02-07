@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public interface BankTransactionSummarizer {
+@FunctionalInterface
+public interface BankTransactionSummarizer{
+    double summarize(double accumulator, BankTransaction bankTransaction);
 }
